@@ -50,7 +50,7 @@ jobs:
           # Instalar Syft si no está disponible
           if ! command -v syft &> /dev/null; then
             echo "Installing Syft..."
-            curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin
+            curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sudo sh -s -- -b /usr/local/bin
           fi
 
           # Generar SBOM
@@ -103,14 +103,18 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Fetch y pull para evitar conflictos
+          git fetch origin
+          git pull origin ${{ github.ref_name }} --rebase || true
 
           git add .evidence/
 
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "evidence: add build scan and SBOM reports"
-            git push
+            git commit -m "evidence: add build scan and SBOM reports [skip ci]"
+            git push origin HEAD:${{ github.ref_name }} || echo "Push failed, but continuing..."
           fi
 
       - name: Check for critical vulnerabilities

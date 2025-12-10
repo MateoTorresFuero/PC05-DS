@@ -9,7 +9,7 @@ on:
 
 jobs:
   build-scan-sbom:
-    runs-on: ubuntu-latest  # Cambiado de self-hosted para usar runners de GitHub
+    runs-on: self-hosted
 
     steps:
       - name: Checkout code

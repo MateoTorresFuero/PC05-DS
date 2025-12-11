@@ -1,6 +1,6 @@
 {
   "SchemaVersion": 2,
-  "CreatedAt": "2025-12-10T05:31:18.536383503-05:00",
+  "CreatedAt": "2025-12-10T23:20:40.182436279-05:00",
   "ArtifactName": "release-radar:latest",
   "ArtifactType": "container_image",
   "Metadata": {
@@ -8,7 +8,7 @@
       "Family": "debian",
       "Name": "13.2"
     },
-    "ImageID": "sha256:0f0be9862e28987449d1048348e02a7b8caab5dcc92a29e376f3f1b4e34da36e",
+    "ImageID": "sha256:48f53fbd4374fd4f474c912dc77996270040d721d511eb99b91e8161f235c3ff",
     "DiffIDs": [
       "sha256:77a2b55fbe8b9984ce0af3ffc0b0ab62507668e63306ec161a585e587a3eb164",
       "sha256:557139ca12a043f1b904ffd4d12e7329a61268ffdc59b41568c66e1c206a95f8",
@@ -122,7 +122,7 @@
         },
         {
           "created": "2025-12-10T10:19:01Z",
-          "created_by": "EXPOSE \u0026{[{{24 0} {24 0}}] 0xc00103c980}",
+          "created_by": "EXPOSE \u0026{[{{24 0} {24 0}}] 0xc0012871c0}",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
         },

@@ -1,0 +1,10 @@
+{
+  "workflow_run": "20126076778",
+  "timestamp": "2025-12-11T08:01:47Z",
+  "release": {
+    "version": "v1.2.0",
+    "commit": "b2db326cc2f1f496e01c0220df6b585cf105e297",
+    "quality_requested": "random"
+  },
+  "analysis": {"version":"v1.2.0","status":"RIESGOSO","metrics":{"error_rate":0.0313,"latency_p95":464.9,"throughput":69,"generated_at":"2025-12-11T08:01:47.232527"},"reasons":["Error rate muy alto: 3.1% (umbral: 2.0%)","Latencia P95 excede umbral: 464.9ms (umbral: 300ms)","Throughput bajo: 69 req/s (mínimo: 1000 req/s)"]}
+}
